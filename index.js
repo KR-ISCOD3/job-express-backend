@@ -13,7 +13,10 @@ server.use(cookieParser());
 config();
 
 server.use(cors({
-  origin: "http://localhost:5173", // your Vue dev server
+  origin: [
+    "http://localhost:5173",
+    "https://job-management-project-vue-express-lemon.vercel.app"
+  ], // your Vue dev server
   credentials: true               // allow cookies
 }));
 
